@@ -28,7 +28,16 @@ seznam_knih = {
     "annakarenina": {"autor": "Lev Tolstoj", "ISBN": "9780199232086", "pujceno": False}
 }
 
-def odstranit_knihu()
+
+def vypis_knih():
+        print("Máme dostupné tyto knihy: ")
+        for nazev in seznam_knih.keys():
+            print(nazev)
+        
+        menu()
+
+
+def odstranit_knihu():
     nazev = input("Zadej název knihy kterou chceš odstranit: ")
 
     text = unicodedata.normalize('NFD', nazev)
@@ -101,7 +110,7 @@ def menu():
     elif volba == 3:
         pridat_knihu()
     elif volba == 4:
-        print(seznam_knih)
+        vypis_knih()
 
         
     
@@ -162,4 +171,3 @@ while True:
     else:
         print("špatná volba")
         continue
-
